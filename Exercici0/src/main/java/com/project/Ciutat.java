@@ -1,0 +1,97 @@
+package com.project;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class Ciutat {
+    private long ciutatId;
+    private String nom;
+    private String pais;
+    private int poblacio;  // És el codi postal
+    private Set<Ciutada> ciutadans;  // Relació lògica (set de ciutadans)
+
+    // Constructors
+    public Ciutat() {
+        this.ciutadans = new HashSet<>();
+    }
+
+    public Ciutat(String nom, String pais, int poblacio) {
+        this.nom = nom;
+        this.pais = pais;
+        this.poblacio = poblacio;
+        this.ciutadans = new HashSet<>();
+    }
+
+    // Getters i Setters
+    public long getCiutatId() {
+        return ciutatId;
+    }
+
+    public void setCiutatId(long ciutatId) {
+        this.ciutatId = ciutatId;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public String getPais() {
+        return pais;
+    }
+
+    public void setPais(String pais) {
+        this.pais = pais;
+    }
+
+    public int getPoblacio() {
+        return poblacio;
+    }
+
+    public void setPoblacio(int poblacio) {
+        this.poblacio = poblacio;
+    }
+
+    public Set<Ciutada> getCiutadans() {
+        return ciutadans;
+    }
+
+    public void setCiutadans(Set<Ciutada> ciutadans) {
+        this.ciutadans = ciutadans;
+    }
+
+    // Mètodes per afegir i treure ciutadans
+    public void addCiutada(Ciutada ciutada) {
+        this.ciutadans.add(ciutada);
+        ciutada.setCiutat(this);  // Relació bidireccional lògica
+    }
+
+    public void removeCiutada(Ciutada ciutada) {
+        this.ciutadans.remove(ciutada);
+        ciutada.setCiutat(null);  // Desfer la relació bidireccional
+    }
+
+    // Mètode toString
+    @Override
+    public String toString() {
+        return this.getCiutatId() + ": " + this.getNom() + " (" + this.getPais() + "), CP: " + this.getPoblacio() + ", Ciutadans: " + ciutadans.size();
+    }
+
+    // Equals i hashCode basats en ciutatId
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Ciutat ciutat = (Ciutat) o;
+        return ciutatId == ciutat.ciutatId;
+    }
+
+    @Override
+    public int hashCode() {
+        return Long.hashCode(ciutatId);
+    }
+}
