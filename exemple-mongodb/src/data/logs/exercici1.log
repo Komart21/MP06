@@ -1,0 +1,13 @@
+{"level":"info","message":"Conectado a MongoDB"}
+{"level":"info","message":"Leyendo el archivo XML..."}
+{"code":"ENOENT","errno":-2,"level":"error","message":"Error leyendo o analizando el archivo XML: ENOENT: no such file or directory, open '/home/super/Baixades/DAM-M06-UF03-Punt-Partida-Mpes/exemple-mongodb/src/Posts.xml'","path":"/home/super/Baixades/DAM-M06-UF03-Punt-Partida-Mpes/exemple-mongodb/src/Posts.xml","stack":"Error: ENOENT: no such file or directory, open '/home/super/Baixades/DAM-M06-UF03-Punt-Partida-Mpes/exemple-mongodb/src/Posts.xml'\n    at Object.readFileSync (node:fs:442:20)\n    at parseXMLFile (/home/super/Baixades/DAM-M06-UF03-Punt-Partida-Mpes/exemple-mongodb/src/exercici1.js:23:24)\n    at loadDataToMongoDB (/home/super/Baixades/DAM-M06-UF03-Punt-Partida-Mpes/exemple-mongodb/src/exercici1.js:94:27)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","syscall":"open"}
+{"code":"ENOENT","errno":-2,"level":"error","message":"Error cargando los datos a MongoDB: ENOENT: no such file or directory, open '/home/super/Baixades/DAM-M06-UF03-Punt-Partida-Mpes/exemple-mongodb/src/Posts.xml'","path":"/home/super/Baixades/DAM-M06-UF03-Punt-Partida-Mpes/exemple-mongodb/src/Posts.xml","stack":"Error: ENOENT: no such file or directory, open '/home/super/Baixades/DAM-M06-UF03-Punt-Partida-Mpes/exemple-mongodb/src/Posts.xml'\n    at Object.readFileSync (node:fs:442:20)\n    at parseXMLFile (/home/super/Baixades/DAM-M06-UF03-Punt-Partida-Mpes/exemple-mongodb/src/exercici1.js:23:24)\n    at loadDataToMongoDB (/home/super/Baixades/DAM-M06-UF03-Punt-Partida-Mpes/exemple-mongodb/src/exercici1.js:94:27)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","syscall":"open"}
+{"level":"info","message":"Conexión a MongoDB cerrada"}
+{"level":"info","message":"Conectado a MongoDB"}
+{"level":"info","message":"Leyendo el archivo XML..."}
+{"level":"info","message":"Procesando las preguntas..."}
+{"level":"info","message":"Eliminando datos existentes..."}
+{"level":"info","message":"Insertando preguntas a MongoDB..."}
+{"level":"info","message":"10000 documentos insertados correctamente."}
+{"level":"info","message":"Datos cargados con éxito!"}
+{"level":"info","message":"Conexión a MongoDB cerrada"}
